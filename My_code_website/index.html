@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header  class="w-11/12 py-1 rounded-md bg-[#3b67ba] m-auto mt-3 mb-4">
+        <input type="text" id="inputvalue" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+        <button onclick="handlesearch()" class="btn capitalize btn-success">Search</button>
+    </header>
+      <!-- loading sppiner  start-->
+      <div id="spinner" class="w-full h-full text-center m-auto hidden">
+        <span class="loading loading-infinity text-white loading-lg"></span>
+        <span class="loading loading-infinity text-white loading-lg"></span>
+        <span class="loading loading-infinity text-white loading-lg"></span>
+    </div>
+    <!-- loading sppiner ends -->
+    <main>
+            <!-- Main card show for website -->
+           <div  class="w-11/12 m-auto grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 phone-container"> </div>
+    </main>
+    <!-- hide/show button for websites -->
+    <div id="hide-show-container" class="hidden">
+        <div  class="flex justify-center my-3">
+            <button onclick="showall()" class="btn btn-active btn-accent">Show</button>
+        </div>
+    </div>
+    <!-- show modal for webistes -->
+    <!-- You can open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
+<dialog id="my_modal_3" class="modal">
+  <form method="dialog" class="modal-box">
+    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+     <div class="show_modal">
+
+     </div>
+  </form>
+</dialog>
+
+
+
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
